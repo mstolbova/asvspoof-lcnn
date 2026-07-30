@@ -1,0 +1,11 @@
+_target_: src.model.ASVSpoofLCNN
+
+n_fft: 1724
+win_length: 1724
+hop_length: 130
+
+input_length: ${max_length}
+
+dropout: 0.75
+
+n_classes: 2

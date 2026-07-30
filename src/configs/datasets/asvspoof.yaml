@@ -1,0 +1,20 @@
+train:
+  _target_: src.datasets.ASVSpoofDataset
+  root_dir: ${data_dir}
+  part: train
+  max_length: ${max_length}
+  random_crop: true
+
+val:
+  _target_: src.datasets.ASVSpoofDataset
+  root_dir: ${data_dir}
+  part: dev
+  max_length: ${max_length}
+  random_crop: false
+
+test:
+  _target_: src.datasets.ASVSpoofDataset
+  root_dir: ${data_dir}
+  part: eval
+  max_length: ${max_length}
+  random_crop: false
