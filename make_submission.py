@@ -81,7 +81,7 @@ def main():
     print(f"Using device: {device}")
     print(f"Loading checkpoint: {args.checkpoint}")
 
-    checkpoint = torch.load(args.checkpoint, map_location="cpu")
+    checkpoint = torch.load(args.checkpoint, map_location="cpu", weights_only=False)
     config = checkpoint["config"]
     if not isinstance(config, DictConfig):
         config = OmegaConf.create(config)
