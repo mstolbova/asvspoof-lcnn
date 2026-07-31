@@ -16,15 +16,15 @@ The repository is built on the [PyTorch Project Template](https://github.com/Bli
 
 ## Results
 
-| Front end | Loss | dev EER, % | eval EER, % |
-| --------- | ---- | ---------- | ----------- |
-| LFCC | weighted cross entropy | 1.01 | 5.46 |
+| Front end | Loss                   | dev EER, % | eval EER, % |
+| --------- | ---------------------- | ---------- | ----------- |
+| LFCC      | weighted cross entropy | 0.67       | 5.46        |
 
 The model was trained for 4 epochs. The checkpoint was selected by the lowest EER on the development set, and the eval EER above is the value returned by the grading script for the predictions produced by that checkpoint.
 
 The result is close to what the literature reports for a comparable system: Lavrentyeva et al. obtain 5.06% eval EER for their single LFCC-LCNN on the same partition.
 
-Training curves and logs: **[W&B report](ADD_LINK_HERE)**
+Training curves and logs: https://api.wandb.ai/links/mariia-stolbova2005-hse-university/eosx2xw7
 
 ---
 
