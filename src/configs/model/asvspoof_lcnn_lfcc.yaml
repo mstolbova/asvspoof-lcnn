@@ -1,0 +1,16 @@
+_target_: src.model.ASVSpoofLCNNLFCC
+
+# LFCC front end of Wang & Yamagishi (arXiv:2103.11326, Sec. 3.1):
+# 20 ms window, 10 ms shift, 512-point FFT, 20 linearly spaced filters.
+sample_rate: 16000
+n_fft: 512
+win_length: 320
+hop_length: 160
+n_filters: 20
+n_ceps: 20
+
+input_length: ${max_length}
+
+dropout: 0.75
+
+n_classes: 2
